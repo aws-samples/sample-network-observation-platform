@@ -1,0 +1,54 @@
+# Terraform
+*.tfstate
+*.tfstate.*
+*.tfstate.backup
+.terraform/
+# .terraform.lock.hcl is intentionally COMMITTED (pins provider versions/hashes for reproducible,
+# supply-chain-safe builds) — do not ignore it.
+*.tfplan
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+*.auto.tfvars
+
+# Secrets — never commit
+*.pem
+*.key
+.env
+.envrc
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+venv/
+.venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Lambda archives (built by the archive provider or local zips)
+*.zip
+!tools/**/*.zip
+
+# draw.io temp/backup files
+.$*
+*.bkp
+*.dtmp
+
+# OS
+desktop.ini

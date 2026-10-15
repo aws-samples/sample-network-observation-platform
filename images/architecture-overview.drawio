@@ -1,0 +1,73 @@
+<mxfile host="Electron" agent="kiro">
+  <diagram id="netobs-overview" name="Overview">
+    <mxGraphModel dx="1131" dy="673" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1300" pageHeight="760" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;fontSize=20;fontStyle=1;align=left;verticalAlign=middle;" value="AWS Network Observation Platform — overview" vertex="1">
+          <mxGeometry height="30" width="900" x="40" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" parent="1" style="text;html=1;fontSize=12;fontStyle=2;align=left;verticalAlign=middle;fontColor=#555555;" value="Sources → Consolidate (Tier 1) → Visualise (Tier 2) → AI-assisted operations (Tier 3). Policy changes flow back through the peer-reviewed IaC pipeline." vertex="1">
+          <mxGeometry height="20" width="1150" x="40" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="o_src" parent="1" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#DD344C;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.network_firewall;" value="Log sources&#xa;Network Firewall · DNS Firewall&#xa;TGW · VPC Flow Logs · CloudTrail" vertex="1">
+          <mxGeometry height="78" width="78" x="70" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="o_t1" parent="1" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#7AA116;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.s3;" value="Tier 1 — Consolidate&#xa;Firehose → S3 (Parquet)&#xa;Glue Data Catalog · Athena" vertex="1">
+          <mxGeometry height="78" width="78" x="360" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="o_t2" parent="1" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#8C4FFF;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.elasticsearch_service;" value="Tier 2 — Visualise&#xa;OpenSearch + Dashboards&#xa;CloudWatch" vertex="1">
+          <mxGeometry height="78" width="78" x="650" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="o_t3" parent="1" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#01A88D;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.bedrock;" value="Tier 3 — AI-assisted ops&#xa;Investigations · Rule-hygiene&#xa;SNS" vertex="1">
+          <mxGeometry height="78" width="78" x="940" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="o_users" parent="1" style="sketch=0;outlineConnect=0;fontColor=#232F3E;fillColor=#232F3E;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.users;" value="Network &amp; Security&#xa;Engineering" vertex="1">
+          <mxGeometry height="56" width="56" x="661" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="o_iac" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="IaC pipeline (Git)&#xa;peer-reviewed changes + CloudTrail audit" vertex="1">
+          <mxGeometry height="70" width="180" x="1020" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="oe1" edge="1" parent="1" source="o_src" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;strokeColor=#1a73e8;strokeWidth=2;fontSize=11;fontColor=#1a73e8;" target="o_t1" value="(1) logs">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oe2" edge="1" parent="1" source="o_t1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;strokeColor=#1a73e8;strokeWidth=2;fontSize=11;fontColor=#1a73e8;" target="o_t2" value="(2) index via S3→OpenSearch">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oe3" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;strokeColor=#2E7D32;strokeWidth=2;fontSize=11;fontColor=#2E7D32;" value="(3) query · rule SIDs">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="399" y="470.04" />
+              <mxPoint x="979" y="470.04" />
+            </Array>
+            <mxPoint x="399" y="430" as="sourcePoint" />
+            <mxPoint x="979" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="oe4" edge="1" parent="1" source="o_t2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;strokeColor=#7B1FA2;strokeWidth=2;fontSize=11;fontColor=#7B1FA2;" target="o_t3" value="(4) alarms">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oe5" edge="1" parent="1" source="o_t2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;strokeColor=#1a73e8;strokeWidth=2;fontSize=11;fontColor=#1a73e8;" value="(5) dashboards">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="689" y="210" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="oe6" edge="1" parent="1" source="o_t3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;strokeColor=#7B1FA2;strokeWidth=2;fontSize=11;fontColor=#7B1FA2;" target="o_iac" value="(6) proposed rule change">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oe7" edge="1" parent="1" source="o_iac" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;strokeColor=#7B1FA2;strokeWidth=2;fontSize=11;fontColor=#7B1FA2;dashed=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" value="(7) apply (peer-reviewed)">
+          <mxGeometry relative="1" x="-0.3504" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="109" y="535" />
+            </Array>
+            <mxPoint x="109" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="o_legend" parent="1" style="text;html=1;fontSize=10;align=left;verticalAlign=top;fillColor=#f5f5f5;strokeColor=#cccccc;rounded=1;spacingLeft=8;spacingTop=6;" value="&lt;b&gt;Line legend&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;color: rgb(26, 115, 232);&quot;&gt;— blue = primary data flow&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;color: light-dark(rgb(46, 125, 50), rgb(237, 237, 237));&quot;&gt;— green = analytics / query&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;color: light-dark(rgb(123, 31, 162), rgb(237, 237, 237));&quot;&gt;— purple = control &amp;amp; feedback (alarms, PR, apply)&lt;/span&gt;" vertex="1">
+          <mxGeometry height="90" width="330" x="108" y="560" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

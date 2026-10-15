@@ -1,0 +1,80 @@
+<mxfile host="Electron" agent="kiro">
+  <diagram id="netobs-tier2" name="Tier 2 - Visualise">
+    <mxGraphModel dx="1414" dy="841" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1320" pageHeight="860" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;fontSize=18;fontStyle=1;align=left;verticalAlign=middle;" value="Tier 2 — Visualise" vertex="1">
+          <mxGeometry height="30" width="900" x="40" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" parent="1" style="text;html=1;fontSize=12;fontStyle=2;align=left;verticalAlign=middle;fontColor=#555555;" value="Index the consolidated Parquet into OpenSearch via the S3→OpenSearch pipeline and present consolidated cross-source dashboards (single-firewall views use AWS's native NFW dashboards). CloudWatch and Direct Connect health are optional add-ons." vertex="1">
+          <mxGeometry height="20" width="1200" x="40" y="48" as="geometry" />
+        </mxCell>
+        <mxCell id="c_ing" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;verticalAlign=top;fontStyle=1;fontSize=12;arcSize=4;opacity=40;" value="S3 → OpenSearch indexing pipeline" vertex="1">
+          <mxGeometry height="130" width="400" x="50" y="232" as="geometry" />
+        </mxCell>
+        <mxCell id="in_s3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;fontStyle=1;" value="From Tier 1&#xa;S3 analysis bucket" vertex="1">
+          <mxGeometry height="52" width="140" x="40" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="br_osis" parent="1" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#8C4FFF;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=10;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.elasticsearch_service;" value="OpenSearch Ingestion&#xa;(Parquet codec, 1+ OCU)" vertex="1">
+          <mxGeometry height="60" width="60" x="260" y="262" as="geometry" />
+        </mxCell>
+        <mxCell id="t2_os" parent="1" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#8C4FFF;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=10;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.elasticsearch_service;" value="Amazon OpenSearch&#xa;Service (network-events-*)" vertex="1">
+          <mxGeometry height="60" width="60" x="490" y="262" as="geometry" />
+        </mxCell>
+        <mxCell id="t2_dash" parent="1" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#8C4FFF;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=10;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.elasticsearch_service;" value="OpenSearch Dashboards&#xa;top talkers · allow/deny&#xa;geo map · log→rule (SID)" vertex="1">
+          <mxGeometry height="60" width="60" x="630" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="t2_users" parent="1" style="sketch=0;outlineConnect=0;fontColor=#232F3E;fillColor=#232F3E;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=10;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.users;" value="Network &amp; Security&#xa;Engineering" vertex="1">
+          <mxGeometry height="56" width="56" x="800" y="262" as="geometry" />
+        </mxCell>
+        <mxCell id="t2_cw" parent="1" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#E7157B;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=10;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.cloudwatch_2;" value="CloudWatch dashboard&#xa;(native quick-view, optional)" vertex="1">
+          <mxGeometry height="60" width="60" x="470" y="394" as="geometry" />
+        </mxCell>
+        <mxCell id="s_dx" parent="1" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#8C4FFF;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=10;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.direct_connect;" value="AWS Direct Connect / DXGW&#xa;metrics only — no flow logs" vertex="1">
+          <mxGeometry height="60" width="60" x="140" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="t2_dx" parent="1" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#E7157B;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=9;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.cloudwatch_2;" value="Direct Connect health&#xa;CloudWatch metrics/alarms&#xa;(only if dx_connection_ids set)" vertex="1">
+          <mxGeometry height="60" width="60" x="340" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="t2_out3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;fontStyle=1;" value="→ Tier 3&#xa;investigations (alarms)" vertex="1">
+          <mxGeometry height="52" width="150" x="630" y="398" as="geometry" />
+        </mxCell>
+        <mxCell id="e_in_sqs" edge="1" parent="1" source="in_s3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;strokeColor=#1a73e8;strokeWidth=2;fontSize=10;fontColor=#1a73e8;" value="(1) S3 object-created">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="110" y="262" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_sqs_osis" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;strokeColor=#1a73e8;strokeWidth=2;fontSize=10;fontColor=#1a73e8;" target="br_osis" value="(2)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="140" y="292" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_osis_os" edge="1" parent="1" source="br_osis" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;strokeColor=#1a73e8;strokeWidth=2;fontSize=10;fontColor=#1a73e8;" target="t2_os" value="(3) index network-events-*">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_os_dash" edge="1" parent="1" source="t2_os" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;strokeColor=#1a73e8;strokeWidth=2;fontSize=10;fontColor=#1a73e8;" target="t2_dash" value="(4)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_dash_users" edge="1" parent="1" source="t2_dash" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;strokeColor=#1a73e8;strokeWidth=2;fontSize=10;fontColor=#1a73e8;" target="t2_users" value="(5) dashboards">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_dx_dx" edge="1" parent="1" source="s_dx" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;strokeColor=#C62828;dashed=1;fontSize=10;fontColor=#C62828;" target="t2_dx" value="AWS/DX metrics">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_cw_out3" edge="1" parent="1" source="t2_cw" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;strokeColor=#7B1FA2;strokeWidth=2;fontSize=10;fontColor=#7B1FA2;" target="t2_out3" value="alarms">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t2_dxnote" parent="1" style="text;html=1;whiteSpace=wrap;fontSize=10;fontStyle=2;align=left;verticalAlign=top;fontColor=#b85450;" value="Traffic crossing Direct Connect is observed via TGW / VPC flow logs (Tier 1) — Direct Connect itself emits no flow logs, only CloudWatch metrics." vertex="1">
+          <mxGeometry height="50" width="520" x="100" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="NaeYCVRUl9rsDZqXheDr-1" parent="1" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#E7157B;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.sqs;" value="&lt;span style=&quot;font-size: 10px;&quot;&gt;Amazon SQS&lt;/span&gt;&lt;br style=&quot;font-size: 10px;&quot;&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;(S3 events)&lt;/span&gt;" vertex="1">
+          <mxGeometry height="60" width="60" x="80" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="RD7MXTNZLrDVGMAPO0gF-1" parent="1" style="text;html=1;fontSize=10;align=left;verticalAlign=top;fillColor=#f5f5f5;strokeColor=#cccccc;rounded=1;spacingLeft=8;spacingTop=6;" value="&lt;b&gt;Line legend&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;color: rgb(26, 115, 232);&quot;&gt;— blue = &amp;nbsp;primary data flow&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;color: light-dark(rgb(123, 31, 162), rgb(237, 237, 237));&quot;&gt;— purple = control &amp;amp; feedback (alarms)&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;color: light-dark(rgb(198, 40, 40), rgb(237, 237, 237));&quot;&gt;— red dashed = metrics only (no flow logs)&lt;/span&gt;" vertex="1">
+          <mxGeometry height="90" width="330" x="475" y="500" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
